@@ -1,3 +1,4 @@
+import com.aluracursos.screenmatch.calculos.CalculadoraDeTiempo;
 import com.aluracursos.screenmatch.modelos.Pelicula;
 import com.aluracursos.screenmatch.modelos.Serie;
 
@@ -36,7 +37,9 @@ public class Principal {
 
         miSerie.muestraFichaTecnica();
         System.out.println("Duraciòn total en MInutos: " + miSerie.getDuracionEnMinutos());
-
+        CalculadoraDeTiempo calculadora = new CalculadoraDeTiempo();
+        calculadora.incluye(miPelicula);
+        System.out.println("calculadora.getTiempoTotal() = " + calculadora.getTiempoTotal());
     }
 
 }
