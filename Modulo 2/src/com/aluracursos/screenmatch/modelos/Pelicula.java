@@ -1,62 +1,20 @@
 package com.aluracursos.screenmatch.modelos;
 
-public class Pelicula {
-    private String nombre;
-    private int fechaDeLanzamiento;
-    private int duracionEnMinutos;
-    private boolean incluidoEnPlan;
-    private double sumaDeLasEvaluaciones;
-    private int totalDeLasEvaluaciones;
+import com.aluracursos.screenmatch.calculos.Clasificaion;
 
-    public String getNombre() {
-        return nombre;
+public class Pelicula  extends Titulo implements Clasificaion {
+    private String director;
+
+    public String getDirector() {
+        return director;
     }
 
-    public int getFechaDeLanzamiento() {
-        return fechaDeLanzamiento;
+    public void setDirector(String director) {
+        this.director = director;
     }
 
-    public int getDuracionEnMinutos() {
-        return duracionEnMinutos;
-    }
-
-    public boolean isIncluidoEnPlan() {
-        return incluidoEnPlan;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public void setFechaDeLanzamiento(int fechaDeLanzamiento) {
-        this.fechaDeLanzamiento = fechaDeLanzamiento;
-    }
-
-    public void setDuracionEnMinutos(int duracionEnMinutos) {
-        this.duracionEnMinutos = duracionEnMinutos;
-    }
-
-    public void setIncluidoEnPlan(boolean incluidoEnPlan) {
-        this.incluidoEnPlan = incluidoEnPlan;
-    }
-
-    public int getTotalDeLasEvaluaciones(){
-        return  totalDeLasEvaluaciones;
-    }
-
-    public void muestraFichaTecnica(){
-        System.out.println("Mi pelicula es:" + nombre);
-        System.out.println("Su fecha de lanzamiento es: " + fechaDeLanzamiento);
-        System.out.println("Duraciòn: " + fechaDeLanzamiento);
-        System.out.println("Incluio en el Plan? :" + incluidoEnPlan);
-    }
-
-    public void  evalua(double nota){
-        sumaDeLasEvaluaciones += nota;
-        totalDeLasEvaluaciones++;
-    }
-
-    public double calcularMedia(){
-        return sumaDeLasEvaluaciones / totalDeLasEvaluaciones;
+    @Override
+    public int getClasificacion() {
+        return (int) (calcularMedia() / 2);
     }
 }
