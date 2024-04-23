@@ -1,4 +1,6 @@
+import com.aluracursos.screenmatch.Episodio;
 import com.aluracursos.screenmatch.calculos.CalculadoraDeTiempo;
+import com.aluracursos.screenmatch.calculos.FiltroRecomendacion;
 import com.aluracursos.screenmatch.modelos.Pelicula;
 import com.aluracursos.screenmatch.modelos.Serie;
 
@@ -43,6 +45,17 @@ public class Principal {
 
         System.out.println("Tiempo neceario para ver stu pelicuals y series:  = "
                 + calculadora.getTiempoTotal() + "minutos");
+
+        FiltroRecomendacion filtroRecomendacion = new FiltroRecomendacion();
+        filtroRecomendacion.filtro(miPelicula);
+
+        Episodio episodio = new Episodio();
+        episodio.setNuemro(1);
+        episodio.setNombre("casa");
+        episodio.setSerie("flash");
+        episodio.setTotalVisualizaciones(50);
+
+        filtroRecomendacion.filtro(episodio);
 
     }
 

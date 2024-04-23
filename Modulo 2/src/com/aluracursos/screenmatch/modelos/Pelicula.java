@@ -1,8 +1,9 @@
 package com.aluracursos.screenmatch.modelos;
 
-import com.aluracursos.screenmatch.calculos.Clasificaion;
+import com.aluracursos.screenmatch.calculos.Clasificacion;
+import com.aluracursos.screenmatch.calculos.Clasificacion;
 
-public class Pelicula  extends Titulo implements Clasificaion {
+public class Pelicula  extends Titulo implements Clasificacion {
     private String director;
 
     public String getDirector() {
