@@ -1,7 +1,7 @@
 import java.util.Random;
 import java.util.Scanner;
 
-public class AdivinaNumero {
+public class    AdivinaNumero {
     public static void main(String[] args) {
         Scanner lector = new Scanner(System.in);
         int numGenerado = new Random().nextInt(100);

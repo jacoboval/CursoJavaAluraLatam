@@ -10,11 +10,13 @@ public class CalculadoraDeTiempo {
         return tiempoTotal;
     }
 
+    //public void  incluye (Titulo titulo) {
     public void  incluye (Titulo titulo) {
+        System.out.println("Agregando duracon en minutos: " + titulo);
         this.tiempoTotal += titulo.getDuracionEnMinutos();
     }
-//    public void  incluye (Serie serie){
-//        tiempoTotal += serie.getDuracionEnMinutos();
-//    }
+    public void  incluye (Serie serie){
+        tiempoTotal += serie.getDuracionEnMinutos();
+    }
 
 }
